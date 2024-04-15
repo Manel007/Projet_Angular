@@ -10,24 +10,23 @@ import {Bloc} from "../../models/Bloc";
 })
 export class BlocComponent implements OnInit {
   blocs!: Bloc[];
-  blocsWithChambres: any[] = [];
+ 
 
-  constructor(
-    private blocService: BlocServiceService,
-   
-  ) {}
+  constructor( private blocService: BlocServiceService) {}
 
   ngOnInit(): void {
-    this.blocService.getBloc().subscribe(
-      (blocs: Bloc[]) => {
-        this.blocs = blocs;
-    
-      }
-    );
+    this.getBlocs(); // Appel de la méthode pour récupérer les blocs lors de l'initialisation du composant
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes)
+  getBlocs(): void {
+    this.blocService.getBloc().subscribe(
+      (blocs) => {
+        this.blocs = blocs; // Assignation des blocs récupérés du service à la propriété du composant
+      },
+      (error) => {
+        console.error('Une erreur s\'est produite lors de la récupération des blocs : ', error);
+      }
+    );
   }
 
 

@@ -15,14 +15,7 @@ import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Import Layouts
-import { FullComponent } from './layouts/full/full.component';
-import { BlankComponent } from './layouts/blank/blank.component';
 
-// Vertical Layout
-import { SidebarComponent } from './layouts/full/sidebar/sidebar.component';
-import { HeaderComponent } from './layouts/full/header/header.component';
-import { BrandingComponent } from './layouts/full/sidebar/branding.component';
-import { AppNavItemComponent } from './layouts/full/sidebar/nav-item/nav-item.component';
 import { BlocComponent } from './gestion bloc/bloc/bloc.component';
 
 import {MatDialog} from "@angular/material/dialog";
@@ -31,12 +24,6 @@ import {MatDialog} from "@angular/material/dialog";
 @NgModule({
   declarations: [
     AppComponent,
-    FullComponent,
-    BlankComponent,
-    SidebarComponent,
-    HeaderComponent,
-    BrandingComponent,
-    AppNavItemComponent,
     BlocComponent
 
 
@@ -45,7 +32,6 @@ import {MatDialog} from "@angular/material/dialog";
   ],
   imports: [
     BrowserModule,
-  
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,

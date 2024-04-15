@@ -22,7 +22,7 @@ export class BlocServiceService {
     getBlocById(id: any): Observable<Bloc> {
       return this.http.get<Bloc>(`${this.baseUrl}/findById/${id}`);
     }
-
+/*
     removeBloc(id: any) {
       return this.http.delete(`${this.baseUrl}/deleteByID/${id}`);
     }
@@ -54,6 +54,6 @@ export class BlocServiceService {
           })
         );
     }
-
+*/
   }
 
