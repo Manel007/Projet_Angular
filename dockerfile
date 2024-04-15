@@ -13,7 +13,7 @@ RUN npm install --legacy-peer-deps
 
 COPY . .
 
-RUN ng build --prod
+RUN ng build 
 
 # Stage 2: Serve Angular app using Nginx
 FROM nginx:alpine
